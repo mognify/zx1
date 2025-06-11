@@ -1,0 +1,20 @@
+i need a powershell GUI script that produces the GUI as shown in the screenshot
+the dimensions and placements do not need to be exact, but they should be close
+assume this script is being run by a sys admin with domain local admin rights, and also assume it's a .ps1 being double-clicked, so it will need to elevate itself to admin
+
+on the left side is the "All Available AD Groups" scrollable pane
+this pane is populated with the queried results of all AD groups
+just below this scrollable pane is the buttons "Load Preset" and "Save Preset As...". The presets will be saved in a text file, where the AD group names will be written in plain .txt files and separated by new lines
+
+on the right side is the "User's current AD groups" scrollable pane
+this pane is populated with the queried results of the user's current AD groups
+just below this scrollable pane is the buttons "Reset to actual" and "Apply updates".
+
+The way these two scrollable panes interfunction is this:
+on startup, the script queries for all available AD groups, and populates the lefthand scrollable pane
+when the user's account is loaded up, their current assigned AD groups will be checkmarked from the lefthand pane. Any items from the lefthand pane that are checkmarked are automatically added to the righthand pane's list. Any items from the lefthand pane that are UNcheckmarked are automatically removed from the righthand pane's list.
+The "Reset to actual" will set the checkmarked items to the user's current live AD groups (it re-queries whenever the "Reset to actual" button is clicked)
+The "Apply updates" button will try to add/remove the groups as designated by the checkmarks
+
+With the "Target User" textfield at the top, that's where the SAMACCOUTNAME/ADACCOUNT name will be input (this is the pc login name that would traditionally be entered into the AD menus to find the user)
+When the "search" button is pressed, if the user is found, then the appropriate items in "All Available AD Groups" get automatically checkmarked if they're associated with the user, reflecting their current groups as per the "Search" results (the "Search" button obviously can act as the alternative to "Reset to actual", but it's nice to have both. You can basically tie the same function to both buttons)
