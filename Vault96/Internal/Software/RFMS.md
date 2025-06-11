@@ -1,0 +1,1 @@
+for installing RFMS: session host, Jim -> new user, what session host, he gives which one, in Active Directory group -> add shortcut to that specific session host, by location not department

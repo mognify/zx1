@@ -1,0 +1,33 @@
+{
+	"nodes":[
+		{"id":"a3398a0d1bea371b","type":"group","x":-98,"y":-200,"width":615,"height":435,"label":"Background thread"},
+		{"id":"f1c2be7ddb09dbe4","type":"group","x":-98,"y":300,"width":928,"height":232,"label":"Forefront thread"},
+		{"id":"14ab215d2531ff72","type":"group","x":-80,"y":-120,"width":382,"height":340,"label":"info collection"},
+		{"id":"4aaf19ca09283d03","type":"group","x":-480,"y":80,"width":197,"height":190,"label":"triggers"},
+		{"id":"1057b248cf71b8b5","type":"text","text":"Screenshot","x":-60,"y":-10,"width":147,"height":60,"color":"5"},
+		{"id":"cc1ae6e713cde976","type":"text","text":"Timestamp","x":-60,"y":60,"width":161,"height":60,"color":"5"},
+		{"id":"9ac8b44ad6b457e5","type":"text","text":"Get Process List","x":-60,"y":140,"width":250,"height":60,"color":"5"},
+		{"id":"17cc713a023f7d6e","type":"text","text":"OCR","x":135,"y":-10,"width":110,"height":60,"color":"5"},
+		{"id":"51209c3124449996","type":"text","text":"ML","x":387,"y":80,"width":110,"height":60,"color":"6"},
+		{"id":"1756d709087dc61f","type":"text","text":"get click position or keystroke","x":-60,"y":-100,"width":305,"height":68,"color":"5"},
+		{"id":"d3ee7410d3eb1c3f","type":"text","text":"onClick","x":-440,"y":100,"width":121,"height":60,"color":"5"},
+		{"id":"b9f02dbda2f9e6f2","type":"text","text":"Highlight expected next click location","x":532,"y":320,"width":247,"height":69,"color":"6"},
+		{"id":"a5e4aa2f4d2b09ca","type":"text","text":"Display expected text input at spot where it's expected to appear when input","x":532,"y":416,"width":278,"height":96,"color":"6"},
+		{"id":"f58d3dae79373010","type":"text","text":"Overlay","x":289,"y":389,"width":153,"height":61,"color":"6"},
+		{"id":"8e5c471a6109bb07","type":"text","text":"onKeystroke","x":-460,"y":190,"width":157,"height":60,"color":"5"},
+		{"id":"8512a1735e181564","type":"text","text":"Predict next action","x":-23,"y":389,"width":213,"height":61,"color":"6"},
+		{"id":"2a45ad43c48c6edf","x":-394,"y":-167,"width":214,"height":50,"color":"5","type":"text","text":"Phase 1 (easy stuff)"},
+		{"id":"ab062cfea263f8d0","x":-394,"y":-100,"width":214,"height":50,"color":"6","type":"text","text":"Phase 2 (hard stuff)"}
+	],
+	"edges":[
+		{"id":"ab5533b53fb9e69c","fromNode":"1057b248cf71b8b5","fromSide":"right","toNode":"17cc713a023f7d6e","toSide":"left"},
+		{"id":"5845e2a2e2cef3bd","fromNode":"14ab215d2531ff72","fromSide":"right","toNode":"51209c3124449996","toSide":"left"},
+		{"id":"e341566620fbc065","fromNode":"4aaf19ca09283d03","fromSide":"right","toNode":"a3398a0d1bea371b","toSide":"left"},
+		{"id":"f96a0b94b2d9578c","fromNode":"4aaf19ca09283d03","fromSide":"right","toNode":"f1c2be7ddb09dbe4","toSide":"left"},
+		{"id":"c8f8fb31c00515d5","fromNode":"f58d3dae79373010","fromSide":"right","toNode":"b9f02dbda2f9e6f2","toSide":"left"},
+		{"id":"b38c90dbddfc469f","fromNode":"8512a1735e181564","fromSide":"right","toNode":"f58d3dae79373010","toSide":"left"},
+		{"id":"8d9db7b5ac48597f","fromNode":"f58d3dae79373010","fromSide":"right","toNode":"a5e4aa2f4d2b09ca","toSide":"left"},
+		{"id":"a38a8dc272d855ec","fromNode":"51209c3124449996","fromSide":"bottom","toNode":"8512a1735e181564","toSide":"top"},
+		{"id":"e79006b7e6b17f0d","fromNode":"8512a1735e181564","fromSide":"top","toNode":"51209c3124449996","toSide":"bottom"}
+	]
+}
